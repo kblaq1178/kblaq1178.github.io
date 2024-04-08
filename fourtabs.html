@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+<link rel="stylesheet" href="fourtabs.css">
+<link rel="stylesheet" href="welcome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700">
+
+</head>
+
+<body>
+<div class="content">
+<div id="home" class="tab-content active">
+<!-- <h2>Welcome to the Homepage</h2> -->
+<!-- Home tab content goes here -->
+<div class="top-nav">
+    <img src="logo.PNG" class="logo">
+
+<a href="icp.html" target="_blank"><button>SIGN IN</button></a>
+
+ 
+    </ul>
+    </div>
+
+
+    
+    <div class="body">
+        <!-- left-section -->
+        <div class="bl">
+            <div class="welcome">
+                <img src="logo.PNG" alt=""> 
+                <h1>Welcome to Andan!</h1>
+                <a href="icp.html" target="_blank"> <button class="btn1">login and start learning</button></a>
+            </div>
+
+        </div>
+
+<!-- right-section -->
+<div class="br">
+    <img src="Saly-19.png" alt="">
+    <img src="Saly-16.png" alt="">
+    <img src="Saly-10.png" alt="">
+    <img src="Saly-17.png" alt="">
+</div>
+
+    </div>
+</div>
+<div id="news" class="tab-content">
+<h2>News Feed</h2>
+<!-- News feed content goes here -->
+</div>
+<div id="notifications" class="tab-content">
+<h2>Notifications</h2>
+<!-- Notifications content goes here -->
+</div>
+<div id="profile" class="tab-content">
+<h2>User Profile</h2>
+<!-- Profile content goes here -->
+</div>
+</div>
+
+<footer>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News Feed</a></li>
+<li><a href="#notifications">Notifications</a></li>
+<li><a href="#profile">Profile</a></li>
+</ul>
+</nav>
+</footer>
+
+<script>
+    const tabs = document.querySelectorAll('.tab-content');
+
+    function switchTab(tab) {
+      tabs.forEach(tabContent => {
+        tabContent.classList.remove('active');
+      });
+      document.getElementById(tab).classList.add('active');
+    }
+
+    document.querySelectorAll('footer nav ul li a').forEach(tabLink => {
+      tabLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetTab = e.target.getAttribute('href').substring(1);
+        switchTab(targetTab);
+      });
+    });
+</script>
+</body>
+
+</html>
